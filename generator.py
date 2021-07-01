@@ -6,6 +6,8 @@ def adder(arr, a, b):
         for j in range(-1, 2):
             if (i==0 and j==0):
                 continue
+            elif ((a+i < 0) or (b+j >= len(arr)) or (b+j < 0) or (a+i >= len(arr))):
+                continue
             elif (arr[a + i][b + j] == -1):
                 continue
             arr[a + i][b + j] += 1
@@ -15,13 +17,13 @@ class mine:
         self.diff = difficulty
         self.size = size
         self.state = np.zeros((size, size), dtype = 'i')
-        size -= 1
+        # size -= 1
         while(difficulty!=0):
-            place_x = random.randint(1, size - 1)
-            place_y = random.randint(1, size - 1)
+            place_x = random.randint(0, size - 1)
+            place_y = random.randint(0, size - 1)
             while (self.state[place_x][place_y] == -1):
-                place_x = random.randint(1, size - 1)
-                place_y = random.randint(1, size - 1)
+                place_x = random.randint(0, size - 1)
+                place_y = random.randint(0, size - 1)
             # print (place_x)
             # print (place%size if (place%size != 0) else 4)
             self.state[place_x][place_y] = -1
