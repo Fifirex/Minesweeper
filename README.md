@@ -1,2 +1,2 @@
 # FiMines
-> work in Preogress.
+> work in Progress.
