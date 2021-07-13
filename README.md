@@ -1,2 +1,0 @@
-# FiMines
-> work in Progress.
