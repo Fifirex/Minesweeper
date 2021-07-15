@@ -6,3 +6,6 @@ tester.py
 
 # DS_STORE
 .DS_Store
+
+# ignoring VSc config
+.vscode/*
